@@ -27,7 +27,9 @@ The architecture follows a modular synchronous design pattern:
 - Sampling Frequency: ≈48kHz
 - Accumulator Width: 16 bits (N = 16)
 - Sine ROM: 512 samples, 8-bit resolution
-- Output frequency formula: $$f_{out} = \frac{M \cdot f_{sample}}{2^{N}}$$Where `M` is a 16-bit value from the switches.
+- Output frequency formula: 
+$$f_{out} = \frac{M \cdot f_{sample}}{2^{N}}$$  
+Where `M` is a 16-bit value from the switches.
 
 ## 5. Criteria for Success
 The project is considered complete if it meets the following requirements:
