@@ -4,8 +4,8 @@ module clk_div
 	parameter OUTPUT_FREQ = 48_000
 )
 (
-	input clk_in,
-	input rst_n,
+	input wire clk_in,
+	input wire rst_n,
 
 	output reg ce_out
 );
@@ -17,7 +17,7 @@ module clk_div
 	always @(posedge clk_in) begin
 		if (!rst_n) begin
 			counter <= 0;
-			clk_out <= 0;
+			ce_out <= 0;
 		end else begin
 			if (counter >= (div - 1)) begin
 				counter <= 0;
