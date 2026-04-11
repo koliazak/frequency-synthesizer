@@ -13,6 +13,6 @@ with open (FILENAME, "w") as f:
 	for i in range(SAMPLES):
 		angle = 2 * math.pi * i / SAMPLES
 		val = int(OFFSET + AMPLITUDE * math.sin(angle))
-		f.write(f"{val}\n")
+		f.write(f"{val:02X}\n")
 
 print(f"File {FILENAME} sussessfully created!")
