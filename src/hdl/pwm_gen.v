@@ -3,17 +3,17 @@ module pwm_gen
 	parameter PWM_RES = 256
 )
 (
-	input  wire               clk,
-	input  wire               rst_n,
-	input  wire [PWM_RES-1:0] duty_cycle,
-	input  wire               duty_valid,
-	output reg                pwm_out
+	input  wire                       clk,
+	input  wire                       rst_n,
+	input  wire [$clog2(PWM_RES)-1:0] duty_cycle,
+	input  wire                       duty_valid,
+	output reg                        pwm_out
 );
 	
 
-	reg [PWM_RES-1:0] counter;
-	reg [PWM_RES-1:0] duty_active;
-	reg [PWM_RES-1:0] duty_shadow;
+	reg [$clog2(PWM_RES)-1:0] counter;
+	reg [$clog2(PWM_RES)-1:0] duty_active;
+	reg [$clog2(PWM_RES)-1:0] duty_shadow;
 
 
 	always @(posedge clk) begin
@@ -35,7 +35,7 @@ module pwm_gen
 	end
     
     always @(posedge clk) begin
-    	pwm_out = (counter < duty_cycle);
+    	pwm_out <= (counter < duty_cycle);
     end
 	
 endmodule
