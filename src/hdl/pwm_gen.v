@@ -35,7 +35,7 @@ module pwm_gen
 	end
     
     always @(posedge clk) begin
-    	pwm_out <= (counter < duty_cycle);
+    	pwm_out <= (counter < duty_active);
     end
 	
 endmodule
