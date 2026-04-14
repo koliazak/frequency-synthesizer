@@ -34,6 +34,6 @@ Where `M` is a 16-bit value from the switches.
 ## 5. Criteria for Success
 The project is considered complete if it meets the following requirements:
 - [X] Clean Synthethis: No "Critical Warnings" and timing violations in the Vivado report.
-- [ ] Frequency accuracy: The output frequency matches the theoretical value calculated by the formula.
-- [ ] Function Purity: the sine wave is visually smooth on an oscilloscope after the RC filter.
-- [ ] Code Reusability: Parameters like `ACC_WIDTH` can be changed without breaking into the logic.
+- [X] Frequency accuracy: The output frequency matches the theoretical value calculated by the formula.
+- [X] Function Purity: the sine wave is visually smooth on an oscilloscope after the RC filter.
+- [X] Code Reusability: Parameters like `ACC_WIDTH` can be changed without breaking into the logic.
